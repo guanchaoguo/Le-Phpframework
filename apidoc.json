@@ -1,0 +1,7 @@
+{
+    "name": "后台管理系统API接口文档",
+    "version": "0.1.0",
+    "description": "后台管理系统API与前端接口数据通讯",
+    "title": "后台管理系统API",
+    "url" : "http://platform.dev/api"
+}
