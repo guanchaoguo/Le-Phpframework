@@ -1,28 +1,18 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: liangxz@szljfkj.com
+ * Date: 2017/3/14
+ * Time: 13:40
+ * 框架入口文件
+ */
+//自动加载
+error_reporting(E_ALL & ~E_NOTICE);
+ini_set("display_errors", 1);
+define('SETTING','ONLINE');//环境设定，测试环境为 TEST ， LOCAL 为开发环境 ,线上环境为 ONLINE, 外网测试环境 PUBLIC 为外网测试环境系统会根据这个常量加载对应环境的配置文件
+date_default_timezone_set('Brazil/West');
+header("Access-Control-Allow-Origin: *");
+require __DIR__.'/../bootstrap/Le.php';
+\bootstrap\Le_framework::boot();
 
-/*
-|--------------------------------------------------------------------------
-| Create The Application
-|--------------------------------------------------------------------------
-|
-| First we need to get an application instance. This creates an instance
-| of the application / container and bootstraps the application so it
-| is ready to receive HTTP / Console requests from the environment.
-|
-*/
 
-$app = require __DIR__.'/../bootstrap/app.php';
-
-/*
-|--------------------------------------------------------------------------
-| Run The Application
-|--------------------------------------------------------------------------
-|
-| Once we have the application, we can handle the incoming request
-| through the kernel, and send the associated response back to
-| the client's browser allowing them to enjoy the creative
-| and wonderful application we have prepared for them.
-|
-*/
-
-$app->run();

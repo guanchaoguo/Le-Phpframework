@@ -1,6 +1,7 @@
-/vendor
-/.idea
-Homestead.json
-Homestead.yaml
+/public/.htaccess
+/public/index.php
+.gitignore
+
+.idea/ljf.iml
+.idea/blade.xml
 .env
-public/out.jpg
